@@ -31,7 +31,6 @@ body {
 
 }
 
-
 /* Entête du site contenant le logo et le menu de navigation */
 /* Logo */
 header {
@@ -40,6 +39,7 @@ header {
     margin-top: 30px;
     justify-content: space-between;
     flex-direction: row;
+   
 
 }
 
@@ -176,9 +176,7 @@ i {
 }
 
 .section-title {
-    margin: 0;
     font-size: 22px;
-
 }
 
 .card {
@@ -236,7 +234,8 @@ i {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-evenly;
+ 
+    
 
 }
 
@@ -246,7 +245,7 @@ i {
 }
 
 .hebergements-cards .card {
-    width: 100%px;
+    width: 100%;
     height: 210px;
 }
 
@@ -269,6 +268,8 @@ i {
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+  
+  
 }
 
 .populaires-title {
@@ -280,6 +281,7 @@ i {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    
 }
 
 .populaires-cards img {
@@ -287,6 +289,7 @@ i {
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+  
 }
 
 .populaires-cards .card-content {
@@ -303,15 +306,78 @@ i {
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
-    margin: 0;
+.card-subtitle {
+   
+    font-size: 14px;
 }
 
-.populaires-cards .card-rating {
+.card-rating {
     margin-bottom: 5px;
 }
-
-.Activités-cards {
+/*Activités à Marseille*/
+/*
+.activités-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    
 }
+.activities-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}*/
+.activites {
+    margin-top: 35px;
+    
+}
+
+.activites-cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+
+}
+
+.activites-cards a {
+    height: 340px;
+
+}
+
+.activites-cards .card {
+ 
+    height: 400px;
+    flex: 1;
+}
+
+.activites-cards img {
+    width: 300px;
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-content{
+    font-size: 16px;
+    margin: 10px;
+
+}
+.footer-conteneur{
+    display: flex;
+    gap: 287px;
+    width: 100% ;
+    height: 163px;
+    margin-top: 90px;
+     background-color: var(--main-bg-color);
+     padding-left: 20px;
+     padding-top: 20px;
+}
+.footer-titre { 
+    padding-bottom: 15px;
+}
+
+li{
+    padding-bottom: 15px;
+    
+}
+
