@@ -34,8 +34,7 @@ body {
 /* Entête du site contenant le logo et le menu de navigation */
 /* Logo */
 header {
-    display: flex;
-    flex-direction: column;
+   
     margin-top: 30px;
     justify-content: space-between;
     flex-direction: row;
@@ -64,7 +63,10 @@ ul.menu {
 li {
     list-style-type: none;
 }
-
+nav{
+    display: flex;
+    justify-content: space-between;
+}
 .navigation:hover {
     color: #0065FC;
     border-top: 3px solid #0065FC;
@@ -80,25 +82,28 @@ h1 {
 }
 
 
-.formulaire-recherche {
+.search-form {
     display: flex;
     align-items: center;
     width: fit-content;
     margin-bottom: 35px;
     margin-top: 35px;
+ 
 
 
 }
 
 
 
-.btn-recherche {
+.search-button {
     border: none;
     border-radius: 0 10px 10px 0;
     padding: 14px;
     background-color: #0065FC;
     color: white;
     font-weight: bold;
+    width: 132px;
+    height: 49px;
 }
 
 i.fa-solid.fa-location-dot {
@@ -107,6 +112,7 @@ i.fa-solid.fa-location-dot {
     background-color: #F2F2F2;
     border-radius: 10px 0 0 10px;
     text-align: center;
+    height: 49px;
 }
 
 
@@ -118,15 +124,13 @@ input[type="text"] {
     outline: none;
     /*suprimer les bordures de formulaire au clic */
 
-
 }
 
-#ville {
-    width: 377px;
-    height: 43px;
+#city {
+    height: 49px;
 }
 
-.filtres {
+.filters {
 
     display: inline-flex;
     flex-direction: row;
@@ -136,13 +140,11 @@ input[type="text"] {
     font-weight: bold;
     font-size: 17px;
     margin-bottom: 35px;
-
     gap: 10px;
-
 
 }
 
-.btnfiltre {
+.filters-button {
 
     height: 50px;
     padding: 12px 18px;
@@ -155,15 +157,13 @@ input[type="text"] {
 }
 
 
-.btnfiltre:hover {
+.filters-button:hover {
     background-color: #DEEBFF;
 }
 
-i {
-    color: #0065FC;
-}
 
-.info-logements {
+
+.accommodations-info {
     font-size: 16px;
     gap: 10px;
     margin-bottom: 35px;
@@ -171,7 +171,7 @@ i {
 
 /* Main - code*/
 
-.hebergements-title {
+.accommodations-title {
     margin-bottom: 30px;
 }
 
@@ -206,7 +206,7 @@ i {
 }
 
 /****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
+.accommodations-and-populars {
     display: flex;
     justify-content: space-between;
 
@@ -214,7 +214,7 @@ i {
 
 }
 
-.hebergements-and-populaires section {
+.accommodations-and-populars section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -223,14 +223,14 @@ i {
 }
 
 /****** Hebergements ***********/
-.hebergements {
+.accommodations {
     width: 65%;
 
 
 }
 
 /* Les cards s'affichent en ligne et passent à la ligne automatiquement */
-.hebergements-cards {
+.accommodations-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -239,17 +239,17 @@ i {
 
 }
 
-.hebergements-cards a {
+.accommodations-cards a {
     width: 30%;
 
 }
 
-.hebergements-cards .card {
+.accommodations-cards .card {
     width: 100%;
     height: 210px;
 }
 
-.hebergements-cards img {
+.accommodations-cards img {
     width: 100%;
     height: 124px;
     border-top-left-radius: 20px;
@@ -258,7 +258,7 @@ i {
 
 }
 
-.afficher-plus {
+.show-more {
     font-size: 18px;
     margin-top: 33px;
     font-weight: 700;
@@ -266,25 +266,25 @@ i {
 }
 
 /****** Populaires ***********/
-.populaires {
+.populars {
     width: 32%;
   
   
 }
 
-.populaires-title {
+.populars-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.populaires-cards .card {
+.populars-cards .card {
     display: flex;
     margin-top: 33px;
     
 }
 
-.populaires-cards img {
+.populars-cards img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
@@ -292,7 +292,7 @@ i {
   
 }
 
-.populaires-cards .card-content {
+.populars-cards .card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
@@ -301,7 +301,7 @@ i {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.populars-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
@@ -314,44 +314,31 @@ i {
 .card-rating {
     margin-bottom: 5px;
 }
-/*Activités à Marseille*/
-/*
-.activités-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    
-}
-.activities-card img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}*/
-.activites {
+
+.activities {
     margin-top: 35px;
     
 }
 
-.activites-cards {
+.activities-cards {
     display: flex;
     gap: 30px;
     margin-top: 30px;
 
 }
 
-.activites-cards a {
+.activities-cards a {
     height: 340px;
 
 }
 
-.activites-cards .card {
+.activities-cards .card {
  
     height: 400px;
     flex: 1;
 }
 
-.activites-cards img {
+.activities-cards img {
     width: 300px;
     height: 350px;
     border-top-left-radius: 20px;
@@ -362,7 +349,7 @@ i {
     margin: 10px;
 
 }
-.footer-conteneur{
+.footer-container{
     display: flex;
     gap: 287px;
     width: 100% ;
@@ -372,12 +359,113 @@ i {
      padding-left: 20px;
      padding-top: 20px;
 }
-.footer-titre { 
+.footer-title { 
+    font-size: 18px;
     padding-bottom: 15px;
 }
 
 li{
-    padding-bottom: 15px;
-    
+    padding-bottom: 15px; 
 }
 
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1024px) {
+     /* titre au-dessus, boutons en dessous */
+    .filters {
+    display: flex;
+    flex-direction: column;  /* titre au-dessus, boutons en dessous */
+    align-items: flex-start;
+    width: 100%;             /* écrase le width: 758px fixe */
+    height: auto;            /* écrase le height: 50px fixe */
+    gap: 15px;
+  }
+    
+    
+     .accommodations-and-populars {
+        flex-direction: column;
+    }
+
+    .accommodations {
+        width: 100%;
+        /*avant c'etait 65%*/
+    }
+      
+    .accommodations .card-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+       
+    }
+  .accommodations .card-subtitle {
+        font-size: 14px;
+           margin-bottom: 8px;
+        margin-top: 8px;
+  }
+     
+    .populars {
+        width: 100%;
+        margin-top: 50px;
+           /*avant c'etait 32%*/
+    }
+   
+
+    .populars-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+   
+    .populars-cards a {
+        width: 30%;
+    }
+    
+    .populars-cards .card-title {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .populars-cards .card-subtitle {
+        font-size: 13px;
+    }
+    .populars-cards .card-rating {
+        margin-bottom: 0px;
+    }
+
+   
+
+.activities{
+    margin-top: 345px;
+}
+    .activities-cards {
+    display: flex;
+    gap: 20px;
+  }
+
+  .activities-cards a {
+    flex: 0 1 48%;
+    max-width: 48%;
+    height: auto;
+  }
+
+  .activities-cards .card {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    padding: 0px;
+  }
+
+  .activities-cards img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .activities-cards .card-content{
+    margin: 19px 25px;
+
+  }
+  .footer-container{
+    gap: 150px;
+  }
+}

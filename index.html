@@ -24,63 +24,66 @@
         <header><!--Entête de la page-->
 
 
-            <div class="logo"><img src="./images/logo/Booki.png" alt="logo booki"></div> <!--Insertion d'un logo-->
+            
             <nav><!--Mise en place d'un menu de navigation-->
+                <div class="logo"><img src="./images/logo/Booki.png" alt="logo booki"></div> <!--Insertion d'un logo-->
                 <ul class="menu">
                     <li class="hebergements">
-                        <a class="navigation" href="#hebergements">Hébergements</a><!--lien vers l'élément qui a l'id="hebergements".
+                        <a class="navigation" href="#accommodations">Hébergements</a><!--lien vers l'élément qui a l'id="hebergements".
            Le # indique une ancre interne (on reste sur la même page, on scrolle vers la section) -->
                     </li>
-                    <li class="Activités">
-                        <a class="navigation" href="#activites">Activités</a>
+                    <li class="activites">
+                        <a class="navigation" href="#activities">Activités</a>
                     </li>
                 </ul>
 
             </nav>
-            </header>
+            
         
         <section class="section-recherche"><!--SECTION RECHERCHE
          <section> = balise sémantique pour une section thématique.
          Contient le titre, le formulaire et les filtres-->
             <h1>Trouver votre hébergement pour des vacances de rêve </h1><!--titre principal de la page-->
-            <p class="sous-titre">En plein centre-ville ou en pleine nature</p><!--paragraphe du sous-titre -->
-            <form class="formulaire-recherche" action="#" method="get">
+            <p class="subtitle">En plein centre-ville ou en pleine nature</p><!--paragraphe du sous-titre -->
+            <form class="search-form" action="#" method="get">
 
                 <!--formulaire-->
-                <label for="ville"><!-- label : étiquette associée à un champ de formulaire-->
+                <label for="city"><!-- label : étiquette associée à un champ de formulaire-->
                     <i
                         class="fa-solid fa-location-dot"></i><!-- i : balise utilisée par Font Awesome pour afficher les icônes-->
 
                 </label>
-                <input type="text" id="ville" placeholder="Marseille, France"><!--champ de saisie de texte-->
-                <button type="submit" class="btn-recherche">Rechercher
+                <input type="text" id="city" placeholder="Marseille, France"><!--champ de saisie de texte-->
+                <button type="submit" class="search-button">Rechercher
                 </button>
 
             </form>
-            <div class="filtres"><!--conteneur de tous les boutons filtres -->
-                <span class="filtres-titre">Filtres</span><!-- span : balise inline pour le mot "Filtres"-->
-                <button type="button" class="btnfiltre">
+            <div class="filters"><!--conteneur de tous les boutons filtres -->
+                <span class="filters-title">Filtres</span><!-- span : balise inline pour le mot "Filtres"-->
+                 <div class="title-and-buttons"> 
+                <button type="button" class="filters-button">
 
                     <i class="fa-solid fa-money-bill-wave"></i> <!--icône billet d'argent -->
                     Économique
                 </button>
-                <button type="button" class="btnfiltre">
+                <button type="button" class="filters-button">
 
                     <i class="fa-solid fa-person"></i> <!--icône personne-->
                     Familial
                 </button>
-                <button type="button" class="btnfiltre">
+                <button type="button" class="filters-button">
 
                     <i class="fa-solid fa-heart"></i><!--icône coeur-->
                     Romantique
                 </button>
-                <button type="button" class="btnfiltre">
+                <button type="button" class="filters-button">
 
                     <i class="fa-solid fa-fire"></i><!--icône feu-->
                     Nos pépites
                 </button>
+                 </div>
             </div>
-            <p class="info-logements">
+            <p class="accommodations-info">
                 <!-- fa-circle-info = icône "i" dans un cercle (information) -->
                 <i class="fa-solid fa-circle-info"></i>
                 Plus de 500 logements sont disponibles dans cette ville
@@ -90,14 +93,14 @@
 
         <main>
 
-            <div class="hebergements-and-populaires">
-                <section class="hebergements" id="hebergements"> 
-                    <div class="hebergements-title">
+            <div class="accommodations-and-populars">
+                <section class="accommodations" id="accommodations"> 
+                    <div class="accommodations-title">
                         <h2 class="section-title">Hébergements à Marseille</h2>
                     </div>
 
-                    <div class="hebergements-cards">
-                        <a href="#">
+                    <div class="accommodations-cards">
+                        <a href="#accommodations">
                             <article class="card">
                                 <img src="./images/hebergements/Hôtel du port.jpg"
                                     alt="Image de la chambre d'hôtel montrant un lit">
@@ -225,16 +228,16 @@
                             </article>
                         </a>
                     </div>
-                    <a href="#" class="afficher-plus">Aficher plus</a>
+                    <a href="#" class="show-more">Aficher plus</a>
 
                 </section>
 
-                <section class="populaires">
-                    <div class="populaires-title">
+                <section class="populars">
+                    <div class="populars-title">
                         <h2 class="section-title">Les plus populaires</h2>
                         <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                     </div>
-                    <div class="populaires-cards">
+                    <div class="populars-cards">
                         <a href="#">
                             <article class="card">
                                 <img src="./images/hebergements/Hôtel Le soleil du matin.jpg"
@@ -298,10 +301,10 @@
                     </div>
                 </section>
             </div>
-            <section class="activites" id="activites">
-                <div class="activites-title">
+            <section class="activities" id="activities">
+                <div class="activities-title">
                     <h2 class="section-title">Activités à Marseille</h2>
-                    <div class="activites-cards">
+                    <div class="activities-cards">
                         <a href="#">
 
                             <article class="card">
@@ -353,39 +356,39 @@
                     </div>
                 </div>
             </section>
-
+        </main>
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-block">
+                        <h2 class="footer-title">À propos</h2>
+                        
+                        <ul class="footer-links">
+                            <li><a href="#">Fonctionnement du site</a></li>
+                            <li><a href="#">Conditions générales</a></li>
+                            <li><a href="#">Données et confidentialité</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h2 class="footer-title">Nos hébergements</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Charte qualité</a></li>
+                            <li><a href="#">Proposer votre hôtel</a></li>
+            
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h2 class="footer-title">Assistance</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Centre d’aide</a></li>
+                            <li><a href="#">Nous contacter</a></li>
+                            
+            
+                        </ul>
+                    </div>
+                    </section>
+            </footer>
 
 </body>
 
-<footer class="footer">
-    <div class="footer-conteneur">
-        <div class="footer-bloc">
-            <h3 class="footer-titre">À propos</h3>
-            
-            <ul class="footer-liens">
-                <li><a href="#">Fonctionnement du site</a></li>
-                <li><a href="#">Conditions générales</a></li>
-                <li><a href="#">Données et confidentialité</a></li>
-            </ul>
-        </div>
-        <div class="footer-bloc">
-            <h3 class="footer-titre">Nos hébergements</h3>
-            <ul class="footer-liens">
-                <li><a href="#">Charte qualité</a></li>
-                <li><a href="#">Proposer votre hôtel</a></li>
-
-            </ul>
-        </div>
-        <div class="footer-bloc">
-            <h3 class="footer-titre">Assistance</h3>
-            <ul class="footer-liens">
-                <li><a href="#">Centre d’aide</a></li>
-                <li><a href="#">Nous contacter</a></li>
-                
-
-            </ul>
-        </div>
-        </section>
-</footer>
 
 </html>
