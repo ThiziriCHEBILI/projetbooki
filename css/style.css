@@ -177,6 +177,9 @@ input[type="text"] {
 .card-title {
   font-size: 16px;
 }
+.accommodations.card-txt {
+  text-wrap: nowrap;
+}
 
 .euro {
   font-weight: 700;
