@@ -36,6 +36,8 @@ header {
   margin-top: 30px;
   justify-content: space-between;
   flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo img {
@@ -59,10 +61,7 @@ ul.menu {
 li {
   list-style-type: none;
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-}
+
 .navigation:hover {
   color: #0065fc;
   border-top: 3px solid #0065fc;
@@ -108,7 +107,8 @@ i.fa-solid.fa-location-dot {
 
 input[type="text"] {
   border: 1px solid #f2f2f2;
-  text-align: center;
+  text-align: start;
+  padding-left: 20px;
   color: black;
   font-weight: bold;
   outline: none;
@@ -229,8 +229,6 @@ input[type="text"] {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.accommodations .card-content {
-}
 
 .show-more {
   font-size: 18px;
@@ -299,7 +297,7 @@ input[type="text"] {
 
 /*width:100% ajouté pour que la card remplisse son lien — flex:1 déplacé sur le <a> parent */
 .activities-cards .card {
-  width: 100%;
+  width: 298px;
   height: 400px;
 }
 
@@ -322,7 +320,7 @@ input[type="text"] {
   display: flex;
   gap: 287px;
   width: 100%;
-  height: 163px;
+  height: 200px;
   background-color: var(--main-bg-color);
   padding-left: 20px;
   padding-top: 20px;
@@ -352,6 +350,7 @@ li {
 
   .accommodations-and-populars {
     flex-direction: column;
+    max-height: none;
   }
 
   .accommodations {
@@ -402,7 +401,6 @@ li {
 
   .activities {
     width: 100%;
-    margin-top: 345px;
     margin-bottom: 65px;
   }
   .activities-cards {
@@ -443,11 +441,15 @@ li {
     padding: 0;
   }
 
-  nav {
+  header {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
+  .section-recherche {
+    margin: 0 20px 0 20px;
+  }
+
   .navigation:hover {
     flex: 1;
     color: #0065fc;
@@ -463,9 +465,7 @@ li {
   .logo {
     margin: auto;
   }
-  .section-recherche {
-    margin: 0 20px 0 20px;
-  }
+
   .fa-magnifying-glass::before {
     color: white;
     font-size: 18px;
@@ -496,7 +496,63 @@ li {
   }
 
   .filters-button {
-    padding: 0px;
     margin: 0px;
+    flex: 1;
+    /* pour que les boutons prennent toute la largeur disponible en mobile */
+  }
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .accommodations-info {
+    display: flex;
+  }
+  .accommodations-cards a {
+    width: 100%;
+  }
+
+  .accommodations {
+    order: 2;
+    margin: 0;
+  }
+
+  .accommodations-and-populars section {
+    max-height: none;
+    border-radius: 0;
+  }
+  .accommodations-and-populars .accommodations {
+    background-color: transparent;
+  }
+
+  .populars-cards {
+    display: block;
+  }
+  .populars {
+    order: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .activities-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px 0 28px;
+  }
+  .activities-cards .card {
+    height: auto;
+  }
+  .activities-cards img {
+    height: 140px;
+  }
+  .section-title .accommodations {
+    padding-left: 20px;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
   }
 }
