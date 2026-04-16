@@ -54,7 +54,7 @@ a {
 /* menu */
 ul.menu {
   display: flex;
-  gap: 70px;
+  gap: 40px;
   font-weight: 500;
 }
 
@@ -92,6 +92,10 @@ h1 {
   width: 132px;
   height: 49px;
 }
+
+.search-button:hover {
+  background-color: #0056d6;
+}
 .search-button-mobile {
   display: none;
 }
@@ -123,7 +127,6 @@ input[type="text"] {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  width: 758px;
   height: 50px;
   font-weight: bold;
   font-size: 17px;
@@ -149,8 +152,10 @@ input[type="text"] {
 
 .accommodations-info {
   font-size: 16px;
-  gap: 10px;
   margin-bottom: 35px;
+}
+.fa-solid.fa-circle-info {
+  font-size: 24px;
 }
 
 /* Main - code*/
@@ -167,7 +172,11 @@ input[type="text"] {
   background-color: white;
   border-radius: 20px;
   padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  transform: translateY(-8px); /* monte de 3px */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1.5); /* ajoute une ombre */
 }
 
 .card img {
@@ -176,8 +185,10 @@ input[type="text"] {
 
 .card-title {
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.accommodations.card-txt {
+.accommodations .card-txt {
   text-wrap: nowrap;
 }
 
@@ -265,7 +276,7 @@ input[type="text"] {
 
 .populars-cards .card-content {
   width: 67%;
-  padding-left: 15px;
+  padding-left: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -300,14 +311,13 @@ input[type="text"] {
 
 /*width:100% ajouté pour que la card remplisse son lien — flex:1 déplacé sur le <a> parent */
 .activities-cards .card {
-  width: 298px;
   height: 400px;
 }
 
 /* width était 300px fixe → remplacé par 100% pour le responsive */
 .activities-cards img {
   width: 100%;
-  height: 350px;
+  height: 340px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -321,16 +331,18 @@ input[type="text"] {
 }
 .footer-container {
   display: flex;
-  gap: 287px;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  height: 200px;
   background-color: var(--main-bg-color);
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 30px;
 }
 .footer-title {
   font-size: 18px;
   padding-bottom: 15px;
+}
+.footer-block {
+  width: 100%;
 }
 
 li {
@@ -429,9 +441,6 @@ li {
     height: 200px;
     object-fit: cover;
   }
-  .activities-cards .card-content {
-    margin: 19px 25px;
-  }
 
   .footer-container {
     gap: 150px;
@@ -449,26 +458,35 @@ li {
     display: flex;
     flex-direction: column;
   }
-  .section-recherche {
-    margin: 0 20px 0 20px;
+  .logo {
+    margin: auto;
   }
 
   .navigation:hover {
     flex: 1;
     color: #0065fc;
-    border-bottom: 3px solid #0065fc;
     padding-top: 26px;
     border-top: none;
   }
+  nav li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #f2f2f2;
+  }
+  nav li:hover {
+    color: #0065fc;
+    border-bottom: 2px solid #0065fc;
+  }
   ul.menu {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 0;
     margin-top: 28px;
+    width: 100%;
   }
-  .logo {
-    margin: auto;
+  .section-recherche {
+    margin: 0 20px 0 20px;
   }
-
   .fa-magnifying-glass::before {
     color: white;
     font-size: 18px;
@@ -489,9 +507,12 @@ li {
     position: absolute;
     right: -12px;
   }
+
+  .search-button-mobile:hover {
+    background-color: #0056d6;
+  }
   .search-form {
     position: relative;
-    width: 100%;
   }
 
   #city {
@@ -500,7 +521,8 @@ li {
 
   .filters-button {
     margin: 0px;
-    flex: 1;
+    padding: 0;
+    width: 47%;
     /* pour que les boutons prennent toute la largeur disponible en mobile */
   }
   .button-container {
@@ -510,6 +532,8 @@ li {
   }
   .accommodations-info {
     display: flex;
+    align-items: center;
+    gap: 10px;
   }
   .accommodations-cards a {
     width: 100%;
@@ -555,7 +579,6 @@ li {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 100%;
     width: 100%;
   }
 }
