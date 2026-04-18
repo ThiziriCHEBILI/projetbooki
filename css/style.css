@@ -23,7 +23,6 @@ body {
 }
 
 .main-container {
-  width: 100%;
   max-width: 1440px;
   min-width: 320px;
   padding: 0 50px;
@@ -34,7 +33,6 @@ body {
 /* Logo */
 header {
   margin-top: 30px;
-  justify-content: space-between;
   flex-direction: row;
   display: flex;
   justify-content: space-between;
@@ -43,7 +41,7 @@ header {
 .logo img {
   width: 61px;
   height: 19px;
-  color: #0065fc;
+  color: var(--main-color);
 }
 
 a {
@@ -63,8 +61,8 @@ li {
 }
 
 .navigation:hover {
-  color: #0065fc;
-  border-top: 3px solid #0065fc;
+  color: var(--main-color);
+  border-top: 3px solid var(--main-color);
   padding-top: 26px;
 }
 
@@ -76,7 +74,6 @@ h1 {
 
 .search-form {
   display: flex;
-  align-items: center;
   margin-bottom: 35px;
   margin-top: 35px;
 }
@@ -85,7 +82,7 @@ h1 {
   border: none;
   border-radius: 0 10px 10px 0;
   padding: 14px;
-  background-color: #0065fc;
+  background-color: var(--main-color);
   color: white;
   font-weight: bold;
   width: 132px;
@@ -102,15 +99,15 @@ h1 {
 i.fa-solid.fa-location-dot {
   padding: 14px;
   font-weight: 900;
-  background-color: #f2f2f2;
+  background-color: var(--main-bg-color);
   border-radius: 10px 0 0 10px;
   text-align: center;
   height: 49px;
+  color: black;
 }
 
 input[type="text"] {
-  border: 1px solid #f2f2f2;
-  text-align: start;
+  border: 1px solid var(--main-bg-color);
   padding-left: 20px;
   color: black;
   font-weight: bold;
@@ -118,7 +115,7 @@ input[type="text"] {
   /*suprimer les bordures de formulaire au clic */
 }
 
-#city {
+#form-input {
   height: 49px;
 }
 
@@ -146,7 +143,7 @@ input[type="text"] {
 }
 
 .filters-button:hover {
-  background-color: #deebff;
+  background-color: var(--filter-bg-color);
 }
 
 .accommodations-info {
@@ -239,7 +236,6 @@ input[type="text"] {
 }
 
 .accommodations-cards .card {
-  width: 100%;
   height: 210px;
 }
 
@@ -297,7 +293,6 @@ input[type="text"] {
 
 /*activités*/
 .activities {
-  width: 100%;
   margin-top: 35px;
 }
 .activities-title {
@@ -339,7 +334,6 @@ input[type="text"] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   background-color: var(--main-bg-color);
   padding: 30px;
 }
@@ -364,7 +358,6 @@ li {
     display: flex;
     flex-direction: column; /* titre au-dessus, boutons en dessous */
     align-items: flex-start;
-    width: 100%; /* écrase le width: 758px fixe */
     height: auto; /* écrase le height: 50px fixe */
     gap: 15px;
   }
@@ -420,23 +413,11 @@ li {
     margin-bottom: 0px;
   }
 
-  .activities {
-    width: 100%;
-    margin-bottom: 65px;
-  }
-  .activities-cards {
-    display: flex;
-    gap: 20px;
-    height: 100%;
-  }
-  /* max-width:25% remplacé par flex:1 pour que les cartes prennent toute la place disponible en tablette */
   .activities-cards a {
-    flex: 1;
     height: auto;
   }
 
   .activities-cards .card {
-    width: 100%;
     height: 270px;
     overflow: hidden;
     padding: 0px;
@@ -460,7 +441,6 @@ li {
   }
 
   header {
-    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -470,25 +450,24 @@ li {
 
   .navigation:hover {
     flex: 1;
-    color: #0065fc;
+    color: var(--main-color);
     padding-top: 26px;
     border-top: none;
   }
   nav li {
     width: 100%;
     text-align: center;
-    border-bottom: 2px solid #f2f2f2;
+    border-bottom: 2px solid var(--main-bg-color);
   }
   nav li:hover {
-    color: #0065fc;
-    border-bottom: 2px solid #0065fc;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
   }
   ul.menu {
     display: flex;
     justify-content: center;
     gap: 0;
     margin-top: 28px;
-    width: 100%;
   }
   .section-recherche {
     margin: 0 20px 0 20px;
@@ -502,8 +481,8 @@ li {
   }
 
   .search-button-mobile {
-    background-color: #0065fc;
-    border-radius: 0 32% 32% 0;
+    background-color: var(--main-color);
+    border-radius: 32%;
     padding: 16px;
     border: none;
     width: 49px;
@@ -511,7 +490,14 @@ li {
     display: block;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
+  .search-form {
+    border: 1px solid var(--main-bg-color);
+    border-radius: 16px;
+  }
 
+  input[type="text"] {
+    border: 1px var(--main-bg-color);
+  }
   .search-button-mobile:hover {
     background-color: #0056d6;
   }
@@ -519,14 +505,19 @@ li {
     position: relative;
   }*/
 
-  #city {
+  #form-input {
     width: 100%;
   }
 
   .filters-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin: 0px;
-    padding: 0;
-    width: 47%;
+    flex: 1;
+    min-width: 45%;
+
     /* pour que les boutons prennent toute la largeur disponible en mobile */
   }
   .button-container {
@@ -583,6 +574,5 @@ li {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%;
   }
 }
