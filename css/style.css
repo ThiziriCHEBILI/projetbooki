@@ -193,7 +193,7 @@ input[type="text"] {
 .card:hover {
   /* Légère élévation et ombre renforcée au survol d'une carte */
   transform: translateY(-8px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 1.5); /* ajoute une ombre */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* ajoute une ombre */
 }
 
 .card img {
@@ -305,7 +305,8 @@ input[type="text"] {
 .populars-cards .card-content {
   /* Zone texte à droite de l'image dans les cartes populaires */
   width: 67%;
-  padding-left: 4px;
+  padding-left: 8px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Répartit titre, sous-titre et étoiles verticalement */
@@ -316,6 +317,11 @@ input[type="text"] {
   font-size: 14px;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+.card-content {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 4px;
 }
 
 /* SECTION ACTIVITÉS */
@@ -349,10 +355,10 @@ input[type="text"] {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.card-content {
-  font-size: 16px;
-  margin-left: 10px;
-  margin-top: 4px;
+
+.activities-cards .card-content {
+  padding: 12px 19px 12px 19px;
+  margin: 0;
 }
 /* PIED DE PAGE */
 .footer {
